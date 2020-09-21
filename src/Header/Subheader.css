@@ -1,0 +1,26 @@
+.subheader {
+  background-color: #242f3e;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.subheader__menu {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-evenly;
+}
+
+.subheader__option {
+  padding-left: 15px;
+}
+
+.podcast__option {
+  padding-right: 20px;
+}
