@@ -9,18 +9,37 @@
 .location {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding-top: 2px;
+}
+
+.location__withIcon {
+  display: flex;
+}
+.just__location__icon {
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-bottom: 5px;
+  padding-right: 3px;
 }
 .subheader__menu {
   display: flex;
   font-size: 14px;
   justify-content: space-evenly;
 }
+.location__line1 {
+  font-size: 12px;
+}
+.location_line2 {
+  font-weight: bold;
+  font-size: 14px;
+}
 
 .subheader__option {
   padding-left: 15px;
 }
 
-.podcast__option {
-  padding-right: 20px;
+.supplies__option {
+  padding-right: 15px;
+  font-weight: bold;
+  font-size: 14px;
 }
