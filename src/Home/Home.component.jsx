@@ -14,7 +14,7 @@ export default function Home() {
         <div className="home__row">
           <Product />
           <Product />
-          {/*item 1 */}
+          <Product />
         </div>
 
         <div className="home__row">
