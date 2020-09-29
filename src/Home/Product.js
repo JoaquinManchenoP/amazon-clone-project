@@ -8,7 +8,7 @@ export default function Product(props) {
         <p>{props.name}</p>
         <p className="product__price">
           <small>$</small>
-          <strong>80.00</strong>
+          <strong>{props.price}</strong>
         </p>
 
         <div className="product__rating">
