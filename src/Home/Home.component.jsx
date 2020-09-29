@@ -2,6 +2,7 @@ import React from "react";
 import "../Home/Home.css";
 import alexaCamara from "../image.assets/alexa-camara.png";
 import Product from "./Product.js";
+import Advertisment from "./advertisment";
 
 export default function Home() {
   return (
@@ -12,9 +13,19 @@ export default function Home() {
         </div>
 
         <div className="home__row">
-          <Product />
-          <Product />
-          <Product />
+          <Product
+            imageUrl="https://m.media-amazon.com/images/I/41khh9onYrL._AC_SL260_.jpg"
+            name="Men's Classic Breasted Peacoat"
+          />
+          <Product
+            imageUrl="https://m.media-amazon.com/images/I/71iHp0fOFXL._AC_UL320_.jpg"
+            name="Amazon Essentails"
+          />
+          <Product
+            imageUrl="https://m.media-amazon.com/images/I/81hzwV8K63L._AC_UL320_.jpg"
+            name="Men's Windbreaker Jacket"
+          />
+          <Advertisment />
         </div>
 
         <div className="home__row">

@@ -1,11 +1,11 @@
 import React from "react";
 import "./Product.css";
 
-export default function Product() {
+export default function Product(props) {
   return (
     <div className="product">
       <div className="product__info">
-        <p>sneaker</p>
+        <p>{props.name}</p>
         <p className="product__price">
           <small>$</small>
           <strong>80.00</strong>
@@ -16,10 +16,7 @@ export default function Product() {
         </div>
       </div>
 
-      <img
-        src="https://m.media-amazon.com/images/I/61UtDdFQ4CL._AC_UL640_QL65_.jpg"
-        alt=""
-      />
+      <img src={props.imageUrl} alt="" />
 
       <button>Add to Cart</button>
     </div>
