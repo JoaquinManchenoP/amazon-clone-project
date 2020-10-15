@@ -12,7 +12,11 @@ export default function Product(props) {
         </p>
 
         <div className="product__rating">
-          <p>rating</p>
+          {Array(props.rating)
+            .fill()
+            .map((_, i) => (
+              <p>⭐</p>
+            ))}
         </div>
       </div>
 

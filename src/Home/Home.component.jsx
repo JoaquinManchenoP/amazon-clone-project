@@ -7,24 +7,35 @@ import Advertisment from "./advertisment";
 export default function Home() {
   var products = {
     jacket: {
-      name: "Men's Windbreaker Jacket",
+      name: "Adidas Men's Essentials Wind Jacket",
       image: "https://m.media-amazon.com/images/I/81hzwV8K63L._AC_UL320_.jpg",
       price: "48.00",
     },
     boots: {
-      name: "Amazon Essentails",
+      name: "Amazon Essentials Women's Tall Rain Boot",
       image: "https://m.media-amazon.com/images/I/71iHp0fOFXL._AC_UL320_.jpg",
       price: "24.00",
     },
     peacoat: {
-      name: "Men's Classic Breasted Peacoat",
+      name:
+        "Men's Mark Classic Wool Blend Pea Coat (Regular Big & Tall and Short)",
       image: "https://m.media-amazon.com/images/I/41khh9onYrL._AC_SL260_.jpg",
       price: 194.0,
     },
     monitor: {
-      name: "ASUS ROG Strix 49' ",
+      name: "Asus ROG Strix XG49VQ 49” Curved Gaming FreeSync Monitor",
       image:
         "https://images-na.ssl-images-amazon.com/images/I/71PjhKA%2BllL._AC_SL1500_.jpg",
+    },
+    camera: {
+      name: "Fujifilm Instax Mini 11 Instant Camera - Charcoal Grey",
+      image:
+        "https://images-na.ssl-images-amazon.com/images/I/71e-mHhnTGL._AC_SL1500_.jpg",
+    },
+    game: {
+      name: "FIFA 21 - PlayStation 4",
+      image:
+        "https://images-na.ssl-images-amazon.com/images/I/81UcwRuVjoL._SL1500_.jpg",
     },
   };
   return (
@@ -38,29 +49,50 @@ export default function Home() {
           <Product
             imageUrl={products.peacoat.image}
             name={products.peacoat.name}
-            price={products.peacoat.price}
+            price={129.99}
+            rating={4}
           />
           <Product
             imageUrl={products.boots.image}
             name={products.boots.name}
-            price={products.boots.price}
+            price={14.68}
+            rating={3}
           />
           <Product
             imageUrl={products.jacket.image}
             name={products.jacket.name}
-            price={products.jacket.price}
+            price={89.99}
+            rating={5}
           />
           <Advertisment />
         </div>
 
-        <div className="home__row2">
-          <Product imageUrl={products.monitor.image} />
-          <Product imageUrl={products.monitor.image} />
+        <div className="home__row">
+          <Product
+            imageUrl={products.game.image}
+            name={products.game.name}
+            price={59.99}
+            rating={4}
+          />
+          <Product
+            imageUrl={products.camera.image}
+            name={products.camera.name}
+            price={64.99}
+            rating={3}
+          />
         </div>
 
         <div className="home__row">
-          {/*item 1 */}
-          {/*item 1 */}
+          <Product
+            imageUrl={products.monitor.image}
+            name={products.monitor.name}
+            price={589.0}
+            rating={3}
+          />
+        </div>
+
+        <div className="footer">
+          <h4>Contact me</h4>
         </div>
       </div>
     </div>

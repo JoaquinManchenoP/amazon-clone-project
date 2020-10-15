@@ -5,6 +5,7 @@ import HamburgerMenu from "./Hamburger-menu.js";
 import SearchIcon from "@material-ui/icons/Search";
 import flag from "../image.assets/usa-flag.png";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -12,8 +13,9 @@ function Header() {
       <div className="hamburger-menu">
         <HamburgerMenu />
       </div>
-
-      <img className="header__logo" src={logo} alt="logo" />
+      <Link to="/">
+        <img className="header__logo" src={logo} alt="logo" />
+      </Link>
 
       <div className="header__search">
         <input className="header__searchInput"></input>
@@ -36,10 +38,12 @@ function Header() {
           <span className="header__optionPrime"> Try Prime</span>
         </div>
 
-        <div className="header__optionBasket">
-          <ShoppingBasketIcon style={{ fontSize: 35 }} />
-          <span className="header__optionLine2 header__basketCount">0</span>
-        </div>
+        <Link to="/checkout">
+          <div className="header__optionBasket">
+            <ShoppingBasketIcon style={{ fontSize: 35 }} />
+            <span className="header__optionLine2 header__basketCount">0</span>
+          </div>
+        </Link>
       </div>
     </div>
   );
