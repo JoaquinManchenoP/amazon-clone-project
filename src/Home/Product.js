@@ -1,28 +1,42 @@
 import React from "react";
 import "./Product.css";
+import { useStateValue } from "../StateProvider";
 
-export default function Product(props) {
+export default function Product({ id, title, image, price, rating }) {
+  const [{ basket }, dispatch] = useStateValue();
+
+  const addToBasket = () => {
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      },
+    });
+  };
+
   return (
     <div className="product">
       <div className="product__info">
-        <p>{props.name}</p>
+        <p>{title}</p>
         <p className="product__price">
           <small>$</small>
-          <strong>{props.price}</strong>
+          <strong>{price}</strong>
         </p>
 
         <div className="product__rating">
-          {Array(props.rating)
+          {Array(rating)
             .fill()
-            .map((_, i) => (
-              <p>⭐</p>
-            ))}
+            .map((_, i) => "⭐")}
         </div>
       </div>
 
-      <img src={props.imageUrl} alt="" />
+      <img src={image} alt="" />
 
-      <button>Add to Cart</button>
+      <button onClick={addToBasket}>Add to Cart</button>
     </div>
   );
 }
