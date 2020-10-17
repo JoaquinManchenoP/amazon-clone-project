@@ -27,10 +27,12 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <div className="header__option">
-          <span className="header__optionLine1">Hello, Sign in</span>
-          <span className="header__optionLine2">Accounts & Lists</span>
-        </div>
+        <Link to="/login" style={{ textDecoration: "none" }}>
+          <div className="header__option">
+            <span className="header__optionLine1">Hello, Sign in</span>
+            <span className="header__optionLine2">Accounts & Lists</span>
+          </div>
+        </Link>
 
         <div className="header__option">
           <span className="header__optionLine1">Returns</span>
@@ -41,7 +43,7 @@ function Header() {
           <span className="header__optionPrime"> Try Prime</span>
         </div>
 
-        <Link to="/checkout">
+        <Link to="/checkout" style={{ textDecoration: "none" }}>
           <div className="header__optionBasket">
             <ShoppingBasketIcon style={{ fontSize: 35 }} />
             <span className="header__optionLine2 header__basketCount">

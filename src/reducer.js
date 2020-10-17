@@ -22,7 +22,7 @@ const reducer = (state, action) => {
       if (index >= 0) {
         newBasket.splice(index, 1);
       } else {
-        console.warn("cant id: $(action.id)");
+        console.warn("cant id: ${action.id}");
       }
       return {
         ...state,
