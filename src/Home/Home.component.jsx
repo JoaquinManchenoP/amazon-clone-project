@@ -11,9 +11,11 @@ export default function Home() {
       image: "https://m.media-amazon.com/images/I/81hzwV8K63L._AC_UL320_.jpg",
       id: "323",
     },
-    boots: {
-      title: "Amazon Essentials Women's Tall Rain Boot",
-      image: "https://m.media-amazon.com/images/I/71iHp0fOFXL._AC_UL320_.jpg",
+    ipad: {
+      title:
+        "New Apple iPad Air (10.9-inch, Wi-Fi, 64GB) - Sky Blue (Latest Model, 4th Generation)",
+      image:
+        "https://images-na.ssl-images-amazon.com/images/I/71FePRgkiZL._AC_SL1500_.jpg",
       id: "523",
     },
     peacoat: {
@@ -41,6 +43,13 @@ export default function Home() {
         "https://images-na.ssl-images-amazon.com/images/I/81UcwRuVjoL._SL1500_.jpg",
       id: "37",
     },
+    alexa: {
+      title:
+        "All-new Echo (4th Gen) | With premium sound, smart home hub, and Alexa | Charcoal",
+      image:
+        "https://images-na.ssl-images-amazon.com/images/I/71JB6hM6Z6L._AC_SL1000_.jpg",
+      id: 77,
+    },
   };
   return (
     <div className="home">
@@ -59,11 +68,11 @@ export default function Home() {
             key={1}
           />
           <Product
-            image={products.boots.image}
-            title={products.boots.title}
-            price={14.68}
+            image={products.ipad.image}
+            title={products.ipad.title}
+            price={599.99}
             rating={3}
-            id={products.boots.id}
+            id={products.ipad.id}
             key={2}
           />
           <Product
@@ -94,6 +103,14 @@ export default function Home() {
             id={products.camera.id}
             key={5}
           />
+          <Product
+            image={products.alexa.image}
+            title={products.alexa.title}
+            price={99.99}
+            rating={5}
+            id={products.alexa.id}
+            key={6}
+          />
         </div>
 
         <div className="home__row">
@@ -103,7 +120,7 @@ export default function Home() {
             price={589.0}
             rating={3}
             id={products.monitor.id}
-            key={6}
+            key={7}
           />
         </div>
 
