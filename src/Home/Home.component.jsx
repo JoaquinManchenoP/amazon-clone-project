@@ -117,7 +117,7 @@ export default function Home() {
           <Product
             image={products.monitor.image}
             title={products.monitor.title}
-            price={589.0}
+            price={399.99}
             rating={3}
             id={products.monitor.id}
             key={7}

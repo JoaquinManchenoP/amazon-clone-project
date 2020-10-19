@@ -49,3 +49,12 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
 }
+.help {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #392fb6;
+  font-size: 14px;
+}
+.login__registerButton {
+  height: 30px;
+}
