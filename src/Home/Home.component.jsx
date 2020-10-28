@@ -125,7 +125,7 @@ export default function Home() {
         </div>
 
         <div className="footer">
-          <h4>Contact me</h4>
+          <h4>Back to Top</h4>
         </div>
       </div>
     </div>

@@ -7,9 +7,16 @@ import flag from "../image.assets/usa-flag.png";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
+import { auth } from "../firebase";
 
 function Header() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+
+  const handleAuthentication = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
 
   return (
     <div className="header">
@@ -27,10 +34,14 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <Link to="/login" style={{ textDecoration: "none" }}>
-          <div className="header__option">
-            <span className="header__optionLine1">Hello, Sign in</span>
-            <span className="header__optionLine2">Accounts & Lists</span>
+        <Link to={!user && "/login"} style={{ textDecoration: "none" }}>
+          <div onClick={handleAuthentication} className="header__option">
+            <span className="header__optionLine1">
+              Hello, {user ? user.email : " Guest"}
+            </span>
+            <span className="header__optionLine2">
+              {user ? "Sign Out" : "Accounts & Lists"}
+            </span>
           </div>
         </Link>
 

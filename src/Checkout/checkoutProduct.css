@@ -26,3 +26,6 @@
 .checkoutProduct__rating > p {
   margin: 3px;
 }
+.userName__checkout {
+  padding-left: 12px;
+}
