@@ -28,4 +28,4 @@ npm install
 
 ### Start the server
 
-npm run start
+npm start
